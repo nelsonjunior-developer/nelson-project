@@ -1,0 +1,4 @@
+rootProject.name = 'nelson-project'
+
+include 'service-discovery'
+

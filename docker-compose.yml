@@ -1,0 +1,5 @@
+eureka-server:
+  image:  assignment-project/service-discovery
+  hostname: service-discovery
+  ports:
+    - "8761:8761"

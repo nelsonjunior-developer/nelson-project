@@ -1,0 +1,7 @@
+# Configuring the Service Discovery
+server:
+  port: 8761
+eureka:
+  client: # don't register with yourself because it not a client
+    registerWithEureka: false
+    fetchRegistry: false
