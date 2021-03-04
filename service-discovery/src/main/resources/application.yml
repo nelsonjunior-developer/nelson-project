@@ -2,6 +2,9 @@
 server:
   port: 8761
 eureka:
+  instance:
+    hostname: eureka-server
+    instanceId: ${spring.application.name}:${eureka.instance.hostname}:${random.value}
   client: # don't register with yourself because it not a client
     registerWithEureka: false
     fetchRegistry: false

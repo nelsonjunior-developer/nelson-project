@@ -1,4 +1,6 @@
 rootProject.name = 'nelson-project'
 
 include 'service-discovery'
+include 'service-greeting'
+include 'api-gateway'
 

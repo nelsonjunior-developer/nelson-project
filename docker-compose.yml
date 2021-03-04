@@ -1,5 +1,17 @@
-eureka-server:
-  image:  assignment-project/service-discovery
-  hostname: service-discovery
-  ports:
-    - "8761:8761"
+version: "3.4"
+services:
+  eureka-server:
+    image:  assignment-project/service-discovery
+    hostname: eureka-server
+    ports:
+      - "8761:8761"
+
+  greeting-server:
+    image:  assignment-project/service-greeting
+    hostname: greeting-server
+    links:
+      - eureka-server
+    depends_on:
+      - eureka-server
+    ports:
+      - "6379-6385:9999"
